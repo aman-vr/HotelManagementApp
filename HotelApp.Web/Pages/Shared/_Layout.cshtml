@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OHMS - Your Home Like Hotel </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="shortcut icon" type="jpeg/png" href="~/css/sun.svg">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" asp-page="/Index">
+                    OHMS
+                    <small>where stay feels like Home</small>
+                </a>
+              
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-page="/AboutUs">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-page="/RoomSearch">Book Room</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-area="" asp-page="/ContactUs">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <div class="container-fluid pb-0 mb-0 justify-content-center text-light Foot">
+        <footer>
+            <div class="row justify-content-center py-5">
+                <div class="col-11">
+                    <div class="row ">
+                        <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                            <h3 class="text-muted mb-md-0 bold-text" style="letter-spacing:2px;">OHMS</h3>
+                        </div>
+                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                            <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link" asp-area="" asp-page="/Disclaimer">Disclaimer</a></li>
+                                <li> <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy Policy</a></li>
+                                <li><a class="nav-link" asp-area="" asp-page="/TermsAndConditions">T&C</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                            <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                            <p class="mb-1">605, ICON BUILDING</p>
+                            <p>SEAWOODS SECTOR, SIRSA</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                            <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> OHMS - 2021 - All Rights Reserved.</small>
+                        </div>
+                        <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                            <h6 class="mt-55 mt-2 text-muted bold-text"><b>AMAN VERMA</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> amanverma@gmail.com</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

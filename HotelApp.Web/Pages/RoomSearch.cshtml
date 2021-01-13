@@ -1,0 +1,97 @@
+﻿@page
+@model HotelApp.Web.Pages.RoomSearchModel
+@{
+    ViewData["Title"] = "Room Search";
+}
+
+<head>
+    <style>
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        form * {
+            padding: .4rem;
+        }
+
+        form input {
+            border: 1px solid black;
+            font-size: 14px;
+            margin-left: 1rem;
+        }
+
+        .align {
+            margin-left: 1.4rem;
+        }
+
+        form button {
+            font-size: 15px;
+            padding: .6rem 2.5rem;
+            border: 1px solid white;
+            margin-left: 6.5rem;
+        }
+        .room-search-main{
+            height:100vh;
+            margin-left:3rem;
+        }
+    </style>
+</head>
+<div class="room-search-main">
+    <div>
+        <h1> Check Available Rooms </h1><br />
+
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.StartDate">Start Date</label>
+                <input asp-for="@Model.StartDate" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.EndDate">End Date</label>
+                <input class="align" asp-for="@Model.EndDate" />
+            </div>
+            <button type="submit" class="btn-btn-primary">Search</button>
+        </form>
+    </div>
+    <br />
+
+    @if ((Model.StartDate >= DateTime.Now.Date) && (Model.EndDate >= DateTime.Now.Date))
+    {
+        @if (Model.AvailableRoomTypes?.Count > 0)
+        {
+            <br />
+            <h2> Room Types Available </h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Room Type</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var room in Model.AvailableRoomTypes)
+                    {
+                        <tr>
+                            <td>
+                                <strong> @room.Title</strong><br />
+                                @room.Description
+                            </td>
+
+                            <td>@string.Format("{0:C}", room.Price)</td>
+                            <td>
+                                <a asp-page="/BookRoom" asp-route-roomtypeid="@room.Id"
+                                   asp-route-startdate="@Model.StartDate.ToShortDateString()"
+                                   asp-route-enddate="@Model.EndDate.ToShortDateString()"> Book Now</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @if (Model.AvailableRoomTypes?.Count <= 0)
+        {
+            <br />
+            <h1> Sorry, No rooms available in the entered dates. </h1>
+        }
+    }
+</div>

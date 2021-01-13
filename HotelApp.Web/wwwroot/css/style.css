@@ -1,0 +1,242 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+.content {
+    background: #f1faee;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: #f1faee;
+    height: 10vh;
+}
+
+.navbar-brand {
+    padding: 2px 10px;
+    font-weight: 600;
+    color: #1d3557 !important;
+    letter-spacing: 2px;
+    font-size: 25px;
+    align-self: center;
+    border-radius: 30%;
+}
+
+.logo {
+    background: none;
+    border-radius: 0;
+    padding: 4px 10px;
+}
+
+    .logo small {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+    }
+
+.navbar-collapse {
+    justify-content: flex-end !important;
+}
+
+.nav-link, .nav li {
+    display: inline !important;
+    color: #f1faee !important;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero {
+    background-image: url("https://www.hotel-west-end.com/img/photos/b/cc9fe3a239883a1b317b4980697f2314.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+    .hero h1 {
+        color: #1d3557;
+        text-align: center;
+        font-family: Quicksand;
+        font-size: 6rem;
+        text-shadow: 3px 2px 3px #457b9d;
+        background: rgba(255, 255, 255,0.6);
+        padding: 2rem 4rem;
+        line-height: 7rem;
+        text-transform: uppercase;
+    }
+
+        .hero h1 span {
+            letter-spacing: 2px;
+        }
+/* Services */
+.services h2, .how-to-book h2, .offerandcoupons{
+    margin-top: 5rem;
+    color: #1d3557;
+    font-size: 2.5em;
+    font-weight: 500;
+    line-height: .7em;
+    border-bottom: rgba(29,53,87,0.4) 1px solid;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 3px #457b9d;
+}
+
+.services div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.services ul {
+    margin-top: 3rem;
+    display: inline;
+}
+
+    .services ul li, .how-to-book p {
+        font-size: 20px;
+        padding: 20px;
+        color: #6b705c;
+        pointer-events: none;
+    }
+
+.how-to-book h2 {
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.how-to-book div {
+    width: 100%;
+    display: Flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .how-to-book div img {
+        height: 450px;
+        width: 500px;
+    }
+
+/* coupon card*/
+.Coupons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coupon_box {
+    background-image: linear-gradient(to top, #1d3557 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    width: 20rem;
+    border-radius: 7px;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-family: 'Tahoma', sans-serif;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.vtime {
+    background: #FF416C;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+
+.title {
+    color: rgba(255,255,255,0.75);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 20px
+}
+
+.how_much {
+    font-size: 55px;
+}
+
+.body h3 {
+    font-size: 35px
+}
+
+.how_much,
+.body h3 {
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center
+}
+
+
+.body {
+    padding-bottom: 3rem;
+    border-bottom: 2px dashed rgba(0,0,0,0.2);
+    position: relative;
+}
+
+    .body::before {
+        content: '500';
+        position: absolute;
+        color: rgba(255,255,255,0.15);
+        top: 0%;
+        left: 5%;
+        font-size: 150px;
+        font-weight: bold;
+    }
+/* Slider Review*/
+
+.carousel-item img {
+    height: 95vh;
+}
+.slide-item img {
+    height: 65vh !important;
+}
+
+.review-corousel {
+    height: 70vh !important;
+    width: 70vw !important;
+    overflow-y: hidden;
+}
+.carousel-caption {
+    right: 1% !important;
+    bottom: 40% !important;
+}
+    .carousel-caption h5{
+        font-size:30px;
+    }
+    .carousel-caption p{
+        font-size:23px;
+    }
+    /* Footer*/
+    .Foot {
+        overflow: hidden;
+        background: #262626;
+        color: #627482 !important;
+        margin-bottom: 0;
+        padding-bottom: 0
+    }
+.bold-text {
+    color: #989c9e !important
+}
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+}
+.nav-link {
+    font-size: 20px !important;
+    color: #627482 !important;
+}

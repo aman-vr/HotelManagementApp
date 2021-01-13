@@ -1,0 +1,73 @@
+﻿@page
+@model HotelApp.Web.Pages.CancelBookingModel
+@{
+    ViewData["Title"] = "Cancel Booking";
+}
+
+<head>
+    <style>
+        form button {
+            font-size: 15px;
+            margin-top: 2rem;
+            padding: .6rem 2.5rem;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<div class="text-center">
+    <h1 style="margin-top:5rem;"> Wanna Cancel a Booking? </h1><br />
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="@Model.MobileNo">Enter mobile no:</label>
+            <input asp-for="@Model.MobileNo" />
+        </div>
+        <button type="submit" class="btn-btn-primary">Search</button>
+    </form>
+</div>
+
+@if (Model.BookingsMade?.Count > 0)
+{
+    <h2> Booking Details: </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Room Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var room in Model.BookingsMade)
+            {
+            <tr>
+                <td>
+                    @room.FirstName
+                    @room.LastName
+                </td>
+                <td>
+                    @room.Title
+                </td>
+                <td>
+                    @room.StartDate.Date
+                </td>
+                <td>
+                    @room.EndDate.Date
+                </td>
+                <td> 
+                    <button>
+                        Confirm Cancel
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (Model.BookingsMade?.Count <= 0)
+{
+    <br />
+    <h2> Sorry, No bookings have been made with the given mobile number. </h2>
+}

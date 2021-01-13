@@ -1,0 +1,39 @@
+﻿@page
+@model HotelApp.Web.Pages.ThankYouModel
+@{
+    ViewData["Title"] = "Thank You";
+}
+
+<head>
+    <style>
+        
+        .thank-you{
+            height:72vh;
+            padding-top:10rem;
+            width:40vw;
+            margin:auto;
+        }
+        .thank-you h1{
+            text-align:center;
+        }
+        form{
+            width:100%;
+        }
+        form button {
+            font-size: 15px;
+            padding: .6rem 2.5rem;
+            border: 1px solid #222;
+            margin: 2rem auto;
+            margin-left:12rem;
+}
+        }
+
+    </style>
+</head>
+
+<div class="thank-you">
+    <h1> Thank You For Booking. </h1>
+    <form method="post">
+        <button type="submit">Book Another ?</button>
+    </form>
+</div>

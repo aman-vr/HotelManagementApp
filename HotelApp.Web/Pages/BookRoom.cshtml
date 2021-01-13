@@ -1,0 +1,64 @@
+﻿@page
+@model HotelApp.Web.Pages.BookRoomModel
+@{
+    ViewData["Title"] = "Book a Room";
+}
+<head>
+    <style>
+        .wrapper {
+            height: 100vh;
+            margin: 0 auto;
+            width: 30vw;
+            padding-top:7rem;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        form * {
+            padding: .4rem;
+        }
+        form input {
+            border: 1px solid #222;
+            font-size: 14px;
+            margin-left: 1rem;
+        }
+        .align {
+            margin-left: 1.4rem;
+        }
+        form button {
+            font-size: 15px;
+            padding: .6rem 2.5rem;
+            border: 1px solid #222;
+            margin-left: 6.8rem;
+        }
+        form button:hover {
+            background-color: white;
+            color: #222;
+        }
+    </style>
+</head>
+
+<div class="wrapper">
+    <h1> Book a Room</h1><br />
+    <h2>@Model.RoomType.Title</h2>
+    <p>
+        @Model.RoomType.Description
+    </p>
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="@Model.FirstName">First Name</label>
+            <input asp-for="@Model.FirstName" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.LastName">Last Name</label>
+            <input asp-for="@Model.LastName" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.MobileNo">Mobile No</label>
+            <input asp-for="@Model.MobileNo" required />
+        </div>
+
+        <button type="submit" class="btn-btn-primary">Book</button>
+    </form>
+</div>
